@@ -241,7 +241,8 @@ contains
     endif
 
     D1 = sqrt(vpd_in)
-    gs = 0.001 + 1.6 * (1.0 + (3.77/D1)) * ((f1_in * 1e6)/ca)
+    !gs = 0.001 + 1.6 * (1.0 + (3.77/D1)) * ((f1_in * 1e6)/ca) CAETE version 1.0
+    gs = 0.001 + 1.6 * (1.0 + (3.77/D1)) * ((f1_in * 1e6)/ca) !g1 constant for paper
     ! rc2_in = real(1./gs, r_4)
     rc2_in = real(1.0 / (gs / 41.0), r_4)  ! transform mmol m-2 s-1 to s m-1 
   end function canopy_resistence
