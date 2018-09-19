@@ -1,3 +1,4 @@
+
 ! Copyright 2017- LabTerra 
 
 !     This program is free software: you can redistribute it and/or modify
@@ -241,8 +242,7 @@ contains
     endif
 
     D1 = sqrt(vpd_in)
-    !gs = 0.001 + 1.6 * (1.0 + (3.77/D1)) * ((f1_in * 1e6)/ca) CAETE version 1.0
-    gs = 0.001 + 1.6 * (1.0 + (3.77/D1)) * ((f1_in * 1e6)/ca) !g1 constant for paper
+    gs = 0.001 + 1.6 * (1.0 + (g1/D1)) * ((f1_in * 1e6)/ca)
     ! rc2_in = real(1./gs, r_4)
     rc2_in = real(1.0 / (gs / 41.0), r_4)  ! transform mmol m-2 s-1 to s m-1 
   end function canopy_resistence
@@ -381,13 +381,8 @@ contains
     real(kind=r_8) :: f1a
     
     !============================================================
-<<<<<<< HEAD
-    !vm_in = (vm*2.0**(0.1*(temp-25.0)))/(1.0+exp(0.3*(temp-36.0))) !CAETE version 1
-    vm_in = (0.00004*2.0**(0.1*(temp-25.0)))/(1.0+exp(0.3*(temp-36.0))) !Vcmax constante para paper mestrado Bianca
-=======
     vm_in = (vm*2.0**(0.1*(temp-25.0)))/(1.0+exp(0.3*(temp-36.0))) 
     !vm_in = (0.00004*2.0**(0.1*(temp-25.0)))/(1.0+exp(0.3*(temp-36.0)))
->>>>>>> upstream/master
 
     !Photo-respiration compensation point (Pa)
     mgama = p3/(p8*(p9**(p10*(temp-p11))))
