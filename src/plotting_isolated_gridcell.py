@@ -1,7 +1,7 @@
 import caete as ct 
 import matplotlib.pyplot as plt 
 
-grd1 = ct.gridcell(239,183)
+grd1 = ct.gridcell(205,89)
 ct.init_caete(grd1)
 ct.run_model(grd1)
 
