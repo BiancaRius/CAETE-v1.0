@@ -21,7 +21,7 @@ with open('pfts.csv', mode='r') as fh:
         i += 1
         print(row)
 
-out[1] = out[1] / 1e6
+out[1] = out[2] / 10000.
 out[5] = out[5] / 100.
 out[6] = out[6] / 100.
 out[7] = out[7] / 100.
