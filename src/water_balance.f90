@@ -188,7 +188,8 @@ contains
     spre = p0(k) * 0.01 ! transforamando de Pascal pra mbar (hPa)
     td = tsoil(k)
     ta = temp(k)
-    pr = prec(k)
+!    pr = prec(k) normal climate
+    pr= prec(k)/2 !-50% of precipitation
     ipar = par(k) / 2.18e5 !it converts from w/m2 to Ein/m2/s
     ru = rhs(k) / 100.
 
