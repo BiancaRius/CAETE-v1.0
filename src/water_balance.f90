@@ -273,7 +273,7 @@ contains
        sm = gridocpmes / 100.0
        
        land_c=sum((cleafmes*sm))+sum((cfrootmes*sm))+sum((cawoodmes*sm))
-       
+!       print*, land_c , n, k
        do p = 1,q
           wsoilt(k) = wsoilt(k) + wsoil_pft(p,k)
           gsoilt(k) = gsoilt(k) + gsoil(p,k)
@@ -284,10 +284,10 @@ contains
        do kk=1,nt
           wsaux1 = wsoilt(kk) + gsoilt(kk)   
           dwww = (wsaux1 - wg0(kk)) / wmax
-          if (abs(dwww).gt. 1e-2) nerro = nerro + 1
+          if (abs(dwww).gt. 1e-3) nerro = nerro + 1
        enddo
        c_change = abs(abs(land_c) - abs(carbon_test)) ! Kg/m2/year
-       if(c_change .gt. 0.2) then
+       if(c_change .gt. 0.01) then
           nerro = 1
           carbon_test = land_c
        endif

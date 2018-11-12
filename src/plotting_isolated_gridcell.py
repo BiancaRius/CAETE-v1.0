@@ -1,7 +1,8 @@
 import caete as ct 
 import matplotlib.pyplot as plt 
 
-grd1 = ct.gridcell(239,183)
+#grd1 = ct.gridcell(277,202) #Nordeste do Brasil
+grd1 = ct.gridcell(433,188) #África
 ct.init_caete(grd1)
 ct.run_model(grd1)
 
