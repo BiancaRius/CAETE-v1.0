@@ -202,7 +202,7 @@ contains
     d = (ep * alfm) / (1. + (gm/gc))
     if(d .gt. 0.0) then
        f5_64 = pt/d
-       f5_64 = exp(-0.08 * f5_64)
+       f5_64 = exp(-0.08*f5_64)
        f5_64 = 1.0 - f5_64
     else
        f5_64 = wa
