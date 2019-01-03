@@ -55,7 +55,8 @@ nx = gp.nx
 ny = gp.ny
 nz = gp.ntimes
 npls = gp.npls
-mask = np.load('mask.npy')
+#mask = np.load('mask.npy') !original for the whole world
+mask = np.load('amazon_mask.npy')
 mask12 = np.load('mask12.npy')
 # output variables names
 varlist = wo.monthly_out + wo.npls_out
