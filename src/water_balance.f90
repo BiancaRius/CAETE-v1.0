@@ -188,6 +188,7 @@ contains
     spre = p0(k) * 0.01 ! transforamando de Pascal pra mbar (hPa)
     td = tsoil(k)
     ta = temp(k)
+!    ta=temp(k)+3
     pr = prec(k) !normal climate
 !    pr= prec(k)/2 !-30% of precipitation
     ipar = par(k) / 2.18e5 !it converts from w/m2 to Ein/m2/s
@@ -287,7 +288,7 @@ contains
           if (abs(dwww).gt. 1e-3) nerro = nerro + 1
        enddo
        c_change = abs(abs(land_c) - abs(carbon_test)) ! Kg/m2/year
-       if(c_change .gt. 0.02) then
+       if(c_change .gt. 0.001) then
           nerro = 1
           carbon_test = land_c
        endif
