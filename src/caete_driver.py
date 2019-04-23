@@ -82,7 +82,7 @@ def model_driver():
             comm = '%s caete_pfts.py' % py_executable
             print('Número de Rodadas definido: 1')
             n_runs = 1
-            assert NPLS == 12, 'O modo PFTS precisa ser compilado com npls=12, npls =  %d fornecido' %npls
+            assert NPLS == 5, 'O modo PFTS precisa ser compilado com npls=5, npls =  %d fornecido' %npls
             break
         elif q == 'n':
             n_runs = int(input('Número de Rodadas: '))
